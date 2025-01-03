@@ -10,7 +10,7 @@ const EventPage: React.FC = () => {
     return (
         <>
             <div>Header</div>
-            <Calendar accentColor={token.Button?.colorPrimary} />
+            <Calendar accentColor={token.Button?.primaryColor} />
         </>
     );
 };

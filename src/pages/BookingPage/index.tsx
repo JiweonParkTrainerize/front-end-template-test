@@ -24,7 +24,7 @@ const BookingOutlet: React.FC = () => {
     const accentColor = useMemo(() => {
         const widgetConfig = searchParams.get(WIDGET_CONFIG_QUERY);
         const queryAccentColor = getAccentColor(widgetConfig);
-        return queryAccentColor ?? COLOUR.PRIMARY ;
+        return queryAccentColor ?? COLOUR.PRIMARY;
     }, []);
     
     return (

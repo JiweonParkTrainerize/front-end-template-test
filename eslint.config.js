@@ -31,6 +31,7 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      // copied from existing config
       "quotes": ["error", "single"],
       "no-extra-semi": "off",
       "@typescript-eslint/no-extra-semi": ["off"],
@@ -51,7 +52,10 @@ export default tseslint.config(
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "error",
       "no-nested-ternary": "error",
-      "no-unneeded-ternary": "warn"
+      "no-unneeded-ternary": "warn",
+
+      // added by g1
+      'react/react-in-jsx-scope': 'off', // Disable the rule for requiring React in scope as it no longer required with React 17+
     },
   },
 )
