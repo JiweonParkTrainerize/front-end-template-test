@@ -5,7 +5,7 @@ import App from './App.tsx';
 import './assets/styles/main.scss';
 
 createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
 );
