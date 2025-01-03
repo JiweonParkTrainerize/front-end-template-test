@@ -8,7 +8,7 @@ export const App: React.FC = () => {
 
   return (
     <>
-      <div className='layout__content'>
+      <div className="layout__content">
         <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -28,6 +28,6 @@ export const App: React.FC = () => {
       </p>
     </>
   );
-}
+};
 
 export default App;
