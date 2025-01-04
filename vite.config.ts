@@ -1,6 +1,7 @@
 import { defineConfig, type PluginOption } from 'vite'
 import react from '@vitejs/plugin-react'
 import { visualizer } from 'rollup-plugin-visualizer';
+import { createHtmlPlugin } from 'vite-plugin-html';
 
 const FALLBACK_SERVER = 'gymengine';
 const PRODUCTION_SERVER = 'trainerize';
@@ -51,6 +52,22 @@ export default defineConfig(({ command, mode }) => {
       process.exit(1); // Exit with error code 1
     }
   }
+
+  plugins.push(
+    createHtmlPlugin({
+      inject: {
+        data: {
+          SERVER: DEV_SERVER,
+          isMinify: !isDevMode,
+          WEB_VERSION,
+          clientSecret,
+          clientSecretId,
+          isLocalDev,
+          deployMode,
+        },
+      },
+    })
+  )
 
   const PORT = 9000;
   const localHostConfig = isDocker

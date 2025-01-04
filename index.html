@@ -9,5 +9,18 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+      const DEV_SERVER = '<%= SERVER %>';
+      const DEV_MODE = JSON.parse('<%= isMinify %>');
+      const isMinify = JSON.parse('<%= isMinify %>');
+      const tzs = {
+          clientId: '<%= clientSecretId %>',
+          client: '<%= clientSecret %>',
+      };
+
+      var g_runningLocalDev = JSON.parse('<%= isLocalDev %>');
+      var g_domain = `${DEV_SERVER}.com`;
+
+    </script>
   </body>
 </html>
